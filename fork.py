@@ -25,6 +25,18 @@ else:
 
 
 def call(command, *args, **kwargs):
+    """Monkey patching call.
+    """
     if isinstance(command, string_types):
         command = shlex.split(command)
     return subprocess.call(command, *args, **kwargs)
+
+
+class Popen(subprocess.Popen):
+    """Monkey patching Popen.
+    """
+
+    def __init__(self, command, *args, **kwargs):
+        if isinstance(command, string_types):
+            command = shlex.split(command)
+        super(Popen, self).__init__(command, *args, **kwargs)
