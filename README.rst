@@ -1,7 +1,9 @@
 Fork
 ====
 
-Fork is a Python package for making writing subprocesses easy.
+Fork is a Python package for making writing subprocesses easy.  Currently
+we just monkey patching the ``call`` and ``Popen`` so that they support
+taking string like command.
 
 
 Installation
