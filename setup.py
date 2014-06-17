@@ -7,6 +7,7 @@ A simple wrapper around subprocess for easy subprocess calling.
 Links
 `````
 
+* `documentation <https://github.com/fengsp/fork>`_
 * `development version
   <http://github.com/fengsp/fork/zipball/master#egg=fork-dev>`_
 
